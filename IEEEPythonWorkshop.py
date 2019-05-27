@@ -35,3 +35,20 @@ for lessonIndex in range(lessons):
 
 for lessonIndex in range(lessons):
     print("Lesson No", lessonIndex + 1, "have rank =", lessonRanks[lessonIndex])
+
+passedLessons = []
+nonPassedLessons = []
+
+for lessonRank in lessonRanks:
+    if int(lessonRank) >= 5:
+        passedLessons.append(lessonRank)
+        continue
+
+    nonPassedLessons.append(lessonRank)
+
+passedLessonsCount = len(passedLessons)
+nonPassedLessonsCount = len(nonPassedLessons)
+
+print("From", lessons, "lessons, you have passed", passedLessonsCount, "lessons and you have non-passed",
+      nonPassedLessonsCount, " lessons")
+print("That's it, bye :D")
