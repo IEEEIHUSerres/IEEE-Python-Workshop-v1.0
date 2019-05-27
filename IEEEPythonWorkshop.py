@@ -22,4 +22,16 @@ if answer in negativeAnswers:
     print("OK, good bye...")
     quit()
 
-print("TODO")
+print("OK, how many lessons you want to give me?")
+lessons = int(input())
+
+print("OK, i will remember it")
+
+lessonRanks = []
+
+for lessonIndex in range(lessons):
+    print("Give me the rank for the lesson number " + str(lessonIndex + 1))
+    lessonRanks.append(input())
+
+for lessonIndex in range(lessons):
+    print("Lesson No", lessonIndex + 1, "have rank =", lessonRanks[lessonIndex])
