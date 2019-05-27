@@ -1,4 +1,5 @@
 #!/usr/bin/python
+from TableNumberAvg import table_number_avg
 
 print("IEEE Workshop v1.0")
 print("What's your name?")
@@ -48,7 +49,10 @@ for lessonRank in lessonRanks:
 
 passedLessonsCount = len(passedLessons)
 nonPassedLessonsCount = len(nonPassedLessons)
+passedLessonsAvg = table_number_avg(passedLessons)
+nonPassedLessonsAvg = table_number_avg(nonPassedLessons)
 
 print("From", lessons, "lessons, you have passed", passedLessonsCount, "lessons and you have non-passed",
       nonPassedLessonsCount, " lessons")
+print("Your passed avg are", passedLessonsAvg, "and non-passed avg are", nonPassedLessonsAvg)
 print("That's it, bye :D")
